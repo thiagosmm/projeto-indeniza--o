@@ -31,7 +31,7 @@ form.onsubmit = async (event) => {
   console.log(data);
 
   try {
-    const response = await fetch("https://script.google.com/macros/s/AKfycbxrjMBkr_LEDTRsQinwYTge87lv6lBQ-IVQgiTCy4Ay3Vf1op8x77rqYKgr4oCmVfypmQ/exec", {
+    const response = await fetch("https://script.google.com/macros/s/AKfycbzy94IlxM-7GzPfQF4UvC0O9RkNRqZGXOkfO6eTOgAI8yguE8wnxPvOkmsX-OCBXBK_Fw/exec", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
