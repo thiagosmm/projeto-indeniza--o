@@ -23,9 +23,10 @@ form.onsubmit = async (event) => {
 
   try {
     const response = await fetch("https://script.google.com/macros/s/AKfycbzy94IlxM-7GzPfQF4UvC0O9RkNRqZGXOkfO6eTOgAI8yguE8wnxPvOkmsX-OCBXBK_Fw/exec", {
+      redirect: "follow",
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "text/plain;charset=utf-8",
       },
       body: JSON.stringify(data),
       // mode: "cors"
