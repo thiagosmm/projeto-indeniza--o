@@ -28,7 +28,7 @@ form.onsubmit = async (event) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
-      mode: "cors"
+      // mode: "cors"
     });
 
     const result = await response.json();
