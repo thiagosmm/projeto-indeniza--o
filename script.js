@@ -19,7 +19,7 @@ form.onsubmit = async (event) => {
   const formData = new FormData(form);
   const data = Object.fromEntries(formData.entries());
 
-  console.log("Dados enviados:", data);
+  console.log("Dados enviadoss:", data);
 
   try {
     const response = await fetch("https://script.google.com/macros/s/AKfycbzFbTygBwCtjb9a8TExTpivSxtWGlVWHdKkgPvP-4PWwXts9iT9zrPFc2u0ovQ9aQ1foQ/exec", {
