@@ -19,17 +19,16 @@ form.onsubmit = async (event) => {
   const formData = new FormData(form);
   const data = Object.fromEntries(formData.entries());
 
-  console.log("Dados enviadoss:", data);
+  console.log("Dados enviados:", data);
 
   try {
     const response = await fetch("https://script.google.com/macros/s/AKfycbwJq2649b99VYq2Vsq6ca0qMUaF0UMJLXjV61yCnG8UiLW3bhS5BLs_a_X4nKs0Jpd9/exec", {
-      redirect: "follow",
       method: "POST",
       headers: {
-        "Content-Type": "application/json;charset=utf-8",
+        "Content-Type": "application/json"
       },
       body: JSON.stringify(data),
-      // mode: "cors"
+      mode: "cors" // 🔹 IMPORTANTE para permitir CORS
     });
 
     const result = await response.json();
