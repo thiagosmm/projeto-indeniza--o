@@ -23,7 +23,7 @@ form.onsubmit = async (event) => {
 
   try {
     // Envia os dados para o servidor
-    const response = await fetch("https://seu-endpoint-do-google-cloud-functions", {
+    const response = await fetch("https://deixa-comigo-111963179619.southamerica-east1.run.app", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
