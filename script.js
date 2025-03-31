@@ -22,7 +22,7 @@ form.onsubmit = async (event) => {
   console.log("Dados enviados:", data);
 
   try {
-    const response = await fetch("https://script.google.com/macros/s/AKfycbzUeTBWvSRnSh7VxHviVXWHV8kvGh847fM5EiVSb4cCaWqR0OUCEnRSNielONL2Sbd_/exec", {
+    const response = await fetch("https://deixa-comigo-111963179619.southamerica-east1.run.app", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
