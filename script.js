@@ -14,15 +14,16 @@ faqs.forEach(faq => {
 const form = document.querySelector('form');
 
 form.onsubmit = async (event) => {
-  event.preventDefault();
+  event.preventDefault(); // Impede o envio padrão do formulário
 
-  const formData = new FormData(form);
-  const data = Object.fromEntries(formData.entries());
+  const formData = new FormData(form); // Captura os dados do formulário
+  const data = Object.fromEntries(formData.entries()); // Converte FormData para um objeto
 
   console.log("Dados enviados:", data);
 
   try {
-    const response = await fetch("https://deixa-comigo-111963179619.southamerica-east1.run.app", {
+    // Envia os dados para o servidor
+    const response = await fetch("https://seu-endpoint-do-google-cloud-functions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -32,10 +33,13 @@ form.onsubmit = async (event) => {
     });
 
     const result = await response.json();
-    alert(result.message || "Processo enviado com sucesso!");
+    // Exibe a resposta do servidor (deve ser apenas "ok")
+    if (result.message === 'ok') {
+      alert("Dados enviados com sucesso!");
+    }
 
   } catch (error) {
-    alert("Erro ao enviar o processo!");
+    alert("Erro ao enviar os dados!");
     console.error("Erro na requisição:", error);
   }
 };
