@@ -23,13 +23,13 @@ form.onsubmit = async (event) => {
 
   try {
     // Envia os dados para o servidor
-    const response = await fetch("https://deixa-comigo-111963179619.southamerica-east1.run.app", {
+    const response = await fetch("https://script.google.com/macros/s/AKfycbzUeTBWvSRnSh7VxHviVXWHV8kvGh847fM5EiVSb4cCaWqR0OUCEnRSNielONL2Sbd_/exec", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
       body: JSON.stringify(data),
-      mode: "cors" // 🔹 IMPORTANTE para permitir CORS
+      mode: "no-cors" // 🔹 IMPORTANTE para permitir CORS
     });
 
     const result = await response.json();
