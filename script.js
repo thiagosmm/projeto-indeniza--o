@@ -23,7 +23,7 @@ form.onsubmit = async (event) => {
 
   try {
     // Envia os dados para o servidor
-    const response = await fetch("https://script.google.com/macros/s/AKfycbzUeTBWvSRnSh7VxHviVXWHV8kvGh847fM5EiVSb4cCaWqR0OUCEnRSNielONL2Sbd_/exec", {
+    const response = await fetch("https://script.google.com/macros/s/AKfycbzqEAcBgaD9gOJ_5b1sqtcy4gja9QjpV7ejqrlsWwYXFddCwggY4zMz_gRZvPvlAF3G/exec", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
